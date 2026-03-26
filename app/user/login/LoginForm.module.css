@@ -1,0 +1,30 @@
+.loginFormContainer {
+  background-image: url('/images/bgImage.webp');
+}
+
+.customInput {
+  border-radius: none !important;
+  /* background-color: gold !important; */
+  color: black !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.customInput:focus,
+.custom-input:focus-visible {
+  border: 1.3px solid var(--primary-brand-color) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* floating label text */
+.customFloating span {
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.customFloating:focus-within span,
+.customFloating:has(input:not(:placeholder-shown)) span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}

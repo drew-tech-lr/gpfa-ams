@@ -1,0 +1,30 @@
+.primary {
+  background-color: var(--primary-brand-color);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  font-size: 1rem;
+}
+
+.secondary {
+  background-color: var(--secondary-brand-color);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.accent {
+  background-color: var(--accent-brand-color);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.accent:hover {
+  color: var(--accent-color);
+  background-color: white;
+}
+
+.accent:hover .icon {
+  color: black;
+}
