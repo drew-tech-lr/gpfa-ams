@@ -1,15 +1,17 @@
-'use client'
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import style from "./LoginForm.module.css";
 import Button from "@/app/components/button/Button";
 import { MdNavigateNext } from "react-icons/md";
 import Footer from "@/app/components/footer/Footer";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
   const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <>
       <div
@@ -42,14 +44,24 @@ const LoginForm = () => {
 
           {/* Password */}
           <div className="password mt-8">
-            <label className={`floating-label ${style.customFloating}`}>
-              <span>Password</span>
-              <input
-                type="password"
-                placeholder="Password"
-                className={`input w-full py-5.5 ${style.customInput}`}
-              />
-            </label>
+            <div className="relative">
+              <label className={`floating-label ${style.customFloating}`}>
+                <span>Password</span>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  className={`input w-full py-5.5 pr-12 ${style.customInput}`}
+                />
+              </label>
+
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 cursor-pointer"
+              >
+                {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
+              </button>
+            </div>
           </div>
 
           <div className="mt-3 flex w-full items-center justify-between forgetPassword">

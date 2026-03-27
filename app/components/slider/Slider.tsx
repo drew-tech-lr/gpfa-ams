@@ -8,25 +8,25 @@ import { Pagination, Autoplay, EffectCreative } from "swiper/modules";
 const Slider = () => {
   const sliderItems = [
     {
-      // imageUrl: sliderImage1,
+      imageUrl: '/images/sliderimage-1.webp',
       heading: "Gbowee Foundation Africa Scholarship Application Portal",
       description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
         support to enable young people attain inclusive and relevant education.`,
     },
     {
-      // imageUrl: sliderImage2,
+      imageUrl: '/images/sliderimage-2.webp',
       heading: "Gbowee Foundation Africa Scholarship Application Portal",
       description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
         support to enable young people attain inclusive and relevant education.`,
     },
     {
-      // imageUrl: sliderImage3,
+      imageUrl: '/images/sliderimage-3.webp',
       heading: "Gbowee Foundation Africa Scholarship Application Portal",
       description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
         support to enable young people attain inclusive and relevant education.`,
     },
     {
-      // imageUrl: sliderImage4,
+      imageUrl: '/images/sliderimage-4.webp',
       heading: "Gbowee Foundation Africa Scholarship Application Portal",
       description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
         support to enable young people attain inclusive and relevant education.`,
@@ -63,7 +63,7 @@ const Slider = () => {
             <div className={` ${style.sliderSlide}`}>
               <span></span>
               <Image
-                src="/images/sliderimage-1.webp"
+                src={item.imageUrl}
                 width={1000}
                 height={1000}
                 alt={item.heading}
