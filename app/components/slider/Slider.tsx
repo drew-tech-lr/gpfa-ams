@@ -8,25 +8,25 @@ import { Pagination, Autoplay, EffectCreative } from "swiper/modules";
 const Slider = () => {
   const sliderItems = [
     {
-      imageUrl: '/images/sliderimage-1.webp',
+      imageUrl: "/images/sliderImage-1.webp",
       heading: "Gbowee Foundation Africa Scholarship Application Portal",
       description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
         support to enable young people attain inclusive and relevant education.`,
     },
     {
-      imageUrl: '/images/sliderimage-2.webp',
+      imageUrl: "/images/sliderImage-2.webp",
+      heading: "GPFA Scholarship Appliction Portal Opens. APPLY NOW!",
+      description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
+        support to enable young people attain inclusive and relevant education.`,
+    },
+    {
+      imageUrl: "/images/sliderImage-3.webp",
       heading: "Gbowee Foundation Africa Scholarship Application Portal",
       description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
         support to enable young people attain inclusive and relevant education.`,
     },
     {
-      imageUrl: '/images/sliderimage-3.webp',
-      heading: "Gbowee Foundation Africa Scholarship Application Portal",
-      description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
-        support to enable young people attain inclusive and relevant education.`,
-    },
-    {
-      imageUrl: '/images/sliderimage-4.webp',
+      imageUrl: "/images/sliderImage-4.webp",
       heading: "Gbowee Foundation Africa Scholarship Application Portal",
       description: `The Gbowee Peace Foundation Scholars Program offers comprehensive 
         support to enable young people attain inclusive and relevant education.`,
@@ -72,7 +72,9 @@ const Slider = () => {
               {/* Slider Content */}
               <div className={`${style.sliderContent}`}>
                 {/* heading */}
-                <h1 className={`mb-3 ${style.sliderText}`}>{item.heading}</h1>
+                <h1 className={`mb-3 ${style.sliderHeading}`}>
+                  {item.heading}
+                </h1>
                 {/* Description */}
                 <p className={`${style.sliderDescription}`}>
                   {item.description}

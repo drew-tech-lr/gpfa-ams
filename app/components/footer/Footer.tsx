@@ -7,7 +7,7 @@ import { IoMailUnread } from "react-icons/io5";
 const Footer = () => {
   return (
     <>
-      <div className={`mt-7 ${style.footer}`}>
+      <div className={`w-full mt-7 ${style.footer}`}>
         <div className="flex items-center gap-1 justify-center">
           <Link href="/">
             <FaGlobe size={20} />
@@ -23,7 +23,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="w-full">
+        <div>
           <hr className="my-3 border-t border-gray-300" />
           <p className="text-center">© 2026 GPFA Scholar Management System</p>
         </div>

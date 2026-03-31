@@ -31,8 +31,10 @@
   bottom: 0;
 }
 
-.sliderText {
-  font-weight: 700;
+.sliderHeading {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
 }
 
 .sliderDescription {
