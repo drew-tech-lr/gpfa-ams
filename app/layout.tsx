@@ -16,7 +16,12 @@ export const metadata: Metadata = {
   title: "GPFA SAMS",
   description: "Gbowee Peace Foundation Africa Scholar Management System",
   icons: {
-    icon: "/images/gpfa-logo.webp",
+    icon: [
+      { url: "/images/gpfa-logo-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/gpfa-logo-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/gpfa-logo-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/gpfa-logo-512.png", sizes: "512x512", type: "image/png" },
+    ],
   },
 };
 

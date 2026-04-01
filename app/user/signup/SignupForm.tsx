@@ -116,7 +116,7 @@ const SignupForm = () => {
               </span>
 
               <span>
-                <Link href="/">Forget Password?</Link>
+                <Link href="/">Forget?</Link>
               </span>
             </div>
 
