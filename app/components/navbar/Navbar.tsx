@@ -16,9 +16,7 @@ const Navbar = () => {
           />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            pariatur dolorum, magni, labore voluptates necessitatibus quis ipsa,
-            quibusdam magnam quidem iure laboriosam nobis rerum veritatis
-            blanditiis cumque exercitationem quaerat. Facere.
+            pariatur dolorum...
           </p>
         </div>
         <Link href="/user/login">User Login</Link>

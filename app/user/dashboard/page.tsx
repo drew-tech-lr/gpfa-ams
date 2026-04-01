@@ -1,26 +1,13 @@
 import React from "react";
+import InfoPage from "./info-page/InfoPage";
+import Trial from "./info-page/Trial";
 
 const userDasboardPage = () => {
   return (
-    <div>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-        similique accusantium excepturi aliquid fugiat iure praesentium, nostrum
-        ium excuid fugiat iure praesentium, nostrum iusto quae temporibus
-        quaerat sapiente laborum facilis rem, libero omnis odit tempora
-        consequatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Minus similique accusantium excepturi aliquid fugiat iure praesentium,
-        nostrum iusto quae temporibus quaerat sapiente laborum facilis rem,
-        libero omnis odit tempora consequatur. Lorem ipsum, dolor sit amet
-        consectetur adipisicing elit. Minus similique accusantium excepturi
-        aliquid fugiat iure praesentium, nostrum iusto quae temporibus quaerat
-        sapiente laborum facilis rem, libero omnis odit tempora consequatur.
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus
-        similique accusantium excepturi aliquid fugiat iure praesentium, nostrum
-        iusto quae temporibus quaerat sapiente laborum facilis rem, libero omnis
-        odit tempora consequatur.
-      </p>
-    </div>
+    <>
+      <InfoPage />
+      {/* <Trial /> */}
+    </>
   );
 };
 

@@ -6,10 +6,8 @@ import Button from "@/app/components/button/Button";
 import Footer from "@/app/components/footer/Footer";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const SignupForm = () => {
-  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   return (
     <>
@@ -32,13 +30,13 @@ const SignupForm = () => {
           </div>
 
           <form className="w-full pt-8 px-10" action="">
-            {/* Fullnamee */}
+            {/* Username */}
             <div className="username">
               <label className={`floating-label ${style.customFloating}`}>
-                <span>Enter Fullname</span>
+                <span>Enter Username</span>
                 <input
                   type="text"
-                  placeholder="Fullname"
+                  placeholder="Enter Username"
                   className={`input w-full py-5.5 ${style.customInput}`}
                 />
               </label>
@@ -50,7 +48,7 @@ const SignupForm = () => {
                 <span>Enter Email</span>
                 <input
                   type="email"
-                  placeholder="Email"
+                  placeholder="Enter Email"
                   className={`input w-full py-5.5 ${style.customInput}`}
                 />
               </label>
@@ -120,7 +118,7 @@ const SignupForm = () => {
               </Link>
             </div>
 
-            {/* SignUp Link */}
+            {/* Login Link */}
             <span className="flex items-center justify-center mt-3">
               <span>
                 Already have an Account?
