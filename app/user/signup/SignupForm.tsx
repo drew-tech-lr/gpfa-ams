@@ -109,17 +109,6 @@ const SignupForm = () => {
               </div>
             </div>
 
-            <div className="mt-3 flex w-full items-center justify-between forgetPassword">
-              <span>
-                <input className="mr-2" id="rememberLogin" type="checkbox" />
-                <label htmlFor="rememberLogin">Remember Me</label>
-              </span>
-
-              <span>
-                <Link href="/">Forget?</Link>
-              </span>
-            </div>
-
             {/* Login Button */}
             <div className="button-container mt-10">
               <Link href="/user/signup">
