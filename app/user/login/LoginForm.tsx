@@ -71,7 +71,7 @@ const LoginForm = () => {
 
             <div className="mt-3 flex w-full items-center justify-between forgetPassword">
               <span>
-                <input className="mr-2" id="rememberLogin" type="radio" />
+                <input className="mr-2" id="rememberLogin" type="checkbox" />
                 <label htmlFor="rememberLogin">Remember Me</label>
               </span>
 
@@ -94,14 +94,12 @@ const LoginForm = () => {
 
             {/* SignUp Link */}
             <span className="flex items-center justify-center mt-3">
-              <p>
-                <strong>
-                  <Link href="/signup" className="body-text">
-                    Singup
-                  </Link>
-                </strong>{" "}
+              <span>
+                <Link href="/user/signup" className="font-semibold">
+                  Singup
+                </Link>{" "}
                 to Create Account
-              </p>
+              </span>
             </span>
           </form>
         </div>

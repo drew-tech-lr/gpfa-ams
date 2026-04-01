@@ -25,7 +25,7 @@ const Footer = () => {
 
         <div>
           <hr className="my-3 border-t border-gray-300" />
-          <p className="text-center">© 2026 GPFA Scholar Management System</p>
+          <p className="text-center">© 2026 GPFA Application Portal </p>
         </div>
       </div>
     </>
