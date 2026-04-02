@@ -15,9 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "GPFA-AMS",
   description: "Gbowee Peace Foundation Africa Scholar Management System",
-  icons: [
-    { url: "/images/gpfa-logo.ico", type: "image/x-icon" },
-  ]
+  icons: { icon: "/images/gpfa-logo.png" },
 };
 
 export default function RootLayout({

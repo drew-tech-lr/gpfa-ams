@@ -1,6 +1,9 @@
 import React from "react";
 import { GoDot, GoDotFill } from "react-icons/go";
 import style from "./InfoPage.module.css";
+import Button from "@/app/components/button/Button";
+import { MdNavigateNext } from "react-icons/md";
+import Link from "next/link";
 
 const InfoPage = () => {
   //   const steps = [{ primaryHeading: "" }];
@@ -126,7 +129,7 @@ const InfoPage = () => {
 
         {/* Local University Criterias  */}
         <div className="my-5">
-          <h3 className="third-Heading">Local University Caterial</h3>
+          <h3 className="third-Heading">Local University Caterias</h3>
           <ul className="">
             <li className="flex items-center gap-2 body-text">
               <GoDotFill className="shrink-0" size={15} />
@@ -149,9 +152,9 @@ const InfoPage = () => {
           </ul>
         </div>
 
-        {/* International University Students */}
-        <div className="">
-          <h3 className="third-heading">International University Students</h3>
+        {/* International University Criterias  */}
+        <div className="my-5">
+          <h3 className="third-Heading">International University Caterias</h3>
           <p className="body-text">
             The Gbowee Peace Foundation Africa currently accepts international
             students from only five African countries, they include{" "}
@@ -160,28 +163,40 @@ const InfoPage = () => {
             <strong>Democratic Republic of Congo</strong>
           </p>
           <ul className="">
-            <li className="body-text">
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
               3.5 Grade Average Point (GPA) acquired from previous semester
-              (First semester Freshmen are excluded)
+              (First semester Freshmen are excluded){" "}
             </li>
-            <li className="body-text">
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
               Two Letters of Recommendation, (Head of Department & Community/
-              Church or Mosque)
+              Church or Mosque){" "}
             </li>
-            <li className="body-text">
-              High School Credentials: Diploma & Official Transcript{" "}
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              High School Credentials: Official Diploma & Transcript{" "}
             </li>
-            <li className="body-text">Two Letters of Recommendation</li>
-            <li className="body-text">Motivational Essay (600 words)</li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Motivational Essay (600 words)
+            </li>
           </ul>
         </div>
 
-        <p>
-          <br />
+        <p className="body-text">
           <strong>Note:</strong> All applicants applying must gain admission
           from their prefered Institution of Study.
         </p>
       </div>
+
+      <Link href="/user/dashboard/application-form">
+        <Button
+          className="my-8 w-full p-6 text-3xl"
+          btnLabel="Start Application"
+          icon={<MdNavigateNext size={25} />}
+        />
+      </Link>
     </>
   );
 };
