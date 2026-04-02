@@ -2,25 +2,24 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "../footer/Footer";
+import UserProfille from "../profile/UserProfille";
+import style from './Navbar.module.css'
 
 const Navbar = () => {
   return (
     <>
-      <div className=" h-full flex flex-col justify-between p-8 ">
+      <div className={` ${style.navbar} h-full flex flex-col justify-between p-8 `}>
         <div>
-          <Image
-            src="/images/gpfa-logo.webp"
-            width={80}
-            height={80}
-            alt={"Gbowee Logo"}
-          />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            pariatur dolorum...
-          </p>
+          <UserProfille />
         </div>
-        <Link href="/user/login">User Login</Link>
-        <Footer />
+
+        <ul className="list hidden lg:block">
+          <li className="list-row">Link 1</li>
+          <li className="list-row">Link 2</li>
+          <li className="list-row">Link 3</li>
+          <li className="list-row">Link 4</li>
+          <li className="list-row">Link 5</li>
+        </ul>
       </div>
     </>
   );

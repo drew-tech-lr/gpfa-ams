@@ -37,27 +37,26 @@ body {
 .secondary-Heading {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   line-height: 1.4;
-  color: var(--brand-brown-light);
+  color: var(--primary-brand-color);
 }
 
 .third-Heading {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-size: clamp(1.1rem, 2.2vw, 1.2rem);
   line-height: 1.4;
-  color: var(--brand-brown);
 }
 
 
 .body-text {
   font-size: clamp(1.1rem, 1.2vw, 1.5rem);
   line-height: 1.7;
-  color: #212529;
+  /* color: var(--accent-brand-color); */
   margin-top: .2rem;
 }
 
 .highlight-text {
   font-size: clamp(1.1rem, 1.2vw, 1.5rem);
   line-height: 1.7;
-  color: var(--accent-brand-color);
+  /* color: var(--accent-brand-color); */
   font-weight: 600;
 }
 

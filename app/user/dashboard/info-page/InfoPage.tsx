@@ -1,14 +1,9 @@
-import Button from "@/app/components/button/Button";
 import React from "react";
-import { BiSkipNext } from "react-icons/bi";
 import { GoDot, GoDotFill } from "react-icons/go";
-import { GrFormPrevious } from "react-icons/gr";
-import { IoMdArrowDropright } from "react-icons/io";
-import { MdOutlineNavigateNext } from "react-icons/md";
-import { SiPushbullet } from "react-icons/si";
+import style from "./InfoPage.module.css";
 
 const InfoPage = () => {
-//   const steps = [{ primaryHeading: "" }];
+  //   const steps = [{ primaryHeading: "" }];
   return (
     <>
       <div className="">
@@ -20,80 +15,172 @@ const InfoPage = () => {
           </p>
         </div>
 
+        <hr className="my-5 border-t border-gray-300" />
+
         {/* General Information  */}
-        <div className="my-5">
+        <div className="">
           <h1 className="primary-Heading">General Information</h1>
           <p className="body-text">
             The Gbowee Peace Foundation (GPFA) scholarship is part of their
             broader education-program aimed at giving underprivileged girls,
             youth, children (including those with special needs) a chance at
             quality education. It is often referred to as a{" "}
-            <span className="font-bold">
+            <span className="font-medium">
               360-degree or fully supported scholarship.
             </span>
           </p>
         </div>
 
         {/* Scholarship Benefits */}
-        <div className=" my-6">
+        <div className="my-5">
           <h2 className="secondary-Heading">Scholarship Benefits</h2>
 
           <ul className="mt-3">
-            <li className="bg-base-200 flex gap-2.5 items-center p-2 body-text">
+            <li className=" flex gap-2.5 items-center p-1 body-text">
               <GoDotFill size={20} />
               Full Tuition
             </li>
-            <li className=" flex items-center gap-2.5 p-2 body-text">
+            <li className=" flex items-center gap-2.5 p-1 body-text">
               <GoDotFill size={20} />
               Internship
             </li>
-            <li className="bg-base-200 flex items-center gap-2.5 p-2 body-text">
+            <li className="flex items-center gap-2.5 p-1 body-text">
               <GoDotFill size={20} />
               Accommodation
             </li>
-            <li className="flex items-center gap-2.5 p-2 body-text">
+            <li className="flex items-center gap-2.5 p-1 body-text">
               <GoDotFill size={20} />
               Medical Expeseses
             </li>
-            <li className="bg-base-200 flex items-center gap-2.5 p-2  body-text">
+            <li className=" flex items-center gap-2.5 p-1  body-text">
               <GoDotFill size={20} />
               Spipend
             </li>
-            <li className="flex items-center gap-2.5 p-2 body-text">
+            <li className="flex items-center gap-2.5 p-1 body-text">
               <GoDotFill size={20} />
               Psycho-social support
             </li>
           </ul>
         </div>
 
+        <hr className="my-5 border-t border-gray-300" />
+
         {/* Eligiability Crateria */}
-        <div className="info-session">
+        <div className="">
           <h3 className="secondary-Heading">Eligiability Criteria</h3>
           <p className="body-text">
             Our scholarship eligibility criteria is based on four categories of
             students they include Technical Vocational Education Training (TVET)
             Students, High School Graduates, Local University and International
-            Students. <br />
-            <strong>Note:</strong> All applicants applying must gain admission
-            from their prefered Institution of Study.
+            Students.
           </p>
         </div>
 
-        <div className="py-8 flex items-center justify-between">
-          <Button variant="accent" btnLabel="Signout" />
-          <div>
-            <Button
-              btnLabel="Previous"
-              icon={<GrFormPrevious size={20} />}
-              variant="secondary"
-            />
-            <Button
-              variant="accent"
-              btnLabel="Next"
-              icon={<MdOutlineNavigateNext size={20} />}
-            />
-          </div>
+        {/* TVET Criterias  */}
+        <div className="my-5">
+          <h3 className="third-Heading">
+            Technical Vocational Training (TVET) Programs
+          </h3>
+          <ul className="">
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Admission Letter for preferred Institution
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Letter of Recommendation; 2 copies
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Motivational Essays
+            </li>
+          </ul>
         </div>
+
+        {/* High School Graduates Criterias  */}
+        <div className="my-5">
+          <h3 className="third-Heading">High School Graduates</h3>
+          <ul className="">
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              High School Credentials: Official Diploma & Transcript{" "}
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              WAEC/WASSCE Certificate
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Letter of Recommendation; 2 copies
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Motivational Essay (300 words)
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Admission Letter for preferred Institution
+            </li>
+          </ul>
+        </div>
+
+        {/* Local University Criterias  */}
+        <div className="my-5">
+          <h3 className="third-Heading">Local University Caterial</h3>
+          <ul className="">
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              3.5 Grade Average Point (GPA) acquired from previous semester
+              (First semester Freshmen are excluded){" "}
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Two Letters of Recommendation, (Head of Department & Community/
+              Church or Mosque){" "}
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              High School Credentials: Official Diploma & Transcript{" "}
+            </li>
+            <li className="flex items-center gap-2 body-text">
+              <GoDotFill className="shrink-0" size={15} />
+              Motivational Essay (600 words)
+            </li>
+          </ul>
+        </div>
+
+        {/* International University Students */}
+        <div className="">
+          <h3 className="third-heading">International University Students</h3>
+          <p className="body-text">
+            The Gbowee Peace Foundation Africa currently accepts international
+            students from only five African countries, they include{" "}
+            <strong>Ghana,</strong> <strong>Sierra Leone,</strong>{" "}
+            <strong>Nigeria,</strong> <strong>Tanzania,</strong> and{" "}
+            <strong>Democratic Republic of Congo</strong>
+          </p>
+          <ul className="">
+            <li className="body-text">
+              3.5 Grade Average Point (GPA) acquired from previous semester
+              (First semester Freshmen are excluded)
+            </li>
+            <li className="body-text">
+              Two Letters of Recommendation, (Head of Department & Community/
+              Church or Mosque)
+            </li>
+            <li className="body-text">
+              High School Credentials: Diploma & Official Transcript{" "}
+            </li>
+            <li className="body-text">Two Letters of Recommendation</li>
+            <li className="body-text">Motivational Essay (600 words)</li>
+          </ul>
+        </div>
+
+        <p>
+          <br />
+          <strong>Note:</strong> All applicants applying must gain admission
+          from their prefered Institution of Study.
+        </p>
       </div>
     </>
   );
