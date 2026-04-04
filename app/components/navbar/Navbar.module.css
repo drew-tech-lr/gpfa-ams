@@ -4,3 +4,13 @@
     /* background-size: cover; */
     background-position: right top;
 }
+
+/* .customStep {
+  color: red; /* text color 
+} */
+
+.customStep::before,
+.customStep::after {
+  background-color: var(--primary-brand-color); /* line + circle color */
+  color: white;
+}

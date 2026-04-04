@@ -1,12 +1,16 @@
 "use client";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import style from "./UserForm.module.css";
 import { MdOutlineAttachEmail, MdOutlinePersonOutline } from "react-icons/md";
 import { BsCalendarDate } from "react-icons/bs";
 import { FaHome } from "react-icons/fa";
 import { IoMdPhonePortrait } from "react-icons/io";
+import { required } from "zod/v4-mini";
 
 const UserForm = () => {
+  const { register, watch } = useForm();
+  const category = watch("category");
   return (
     <>
       <form action="">
@@ -176,7 +180,7 @@ const UserForm = () => {
 
             {/* Gender */}
             <div className="my-1 formInput">
-              <label htmlFor="county" className={`${style.customLabel}`}>
+              <label htmlFor="gender" className={`${style.customLabel}`}>
                 Gender *
               </label>
 
@@ -254,7 +258,10 @@ const UserForm = () => {
 
             {/* Parent/ Gurdian Fullname */}
             <div className="mt-5 my-1 formInput">
-              <label htmlFor="fullname" className={`${style.customLabel}`}>
+              <label
+                htmlFor="parentFullname"
+                className={`${style.customLabel}`}
+              >
                 Fullname *
               </label>
 
@@ -266,17 +273,17 @@ const UserForm = () => {
                   className={` ${style.formIcon} shrink-0`}
                 />
                 <input
-                  id="fullname"
+                  id="parentFullname"
                   type="text"
                   className={`grow`}
-                  placeholder="Type your name here"
+                  placeholder="Type Fullname here"
                 />
               </label>
             </div>
 
             {/* Parent/ Gurdian Email */}
             <div className="my-1 mt-5 formInput">
-              <label htmlFor="email" className={`${style.customLabel}`}>
+              <label htmlFor="parentEmail" className={`${style.customLabel}`}>
                 Email *
               </label>
 
@@ -288,17 +295,17 @@ const UserForm = () => {
                   className={` ${style.formIcon} shrink-0`}
                 />
                 <input
-                  id="email"
+                  id="parentEmail"
                   type="email"
                   className={`grow`}
-                  placeholder="Enter your email"
+                  placeholder="Type Email here"
                 />
               </label>
             </div>
 
             {/* Parent/ Gurdian Phone */}
             <div className="my-1 formInput">
-              <label htmlFor="phone" className={`${style.customLabel}`}>
+              <label htmlFor="parentPhone" className={`${style.customLabel}`}>
                 Contact Number *
               </label>
 
@@ -310,17 +317,20 @@ const UserForm = () => {
                   className={`${style.formIcon} shrink-0`}
                 />
                 <input
-                  id="phone"
+                  id="parentPhone"
                   type="phone"
                   className={`grow`}
-                  placeholder="Enter your Phone number"
+                  placeholder="Enter Phone number"
                 />
               </label>
             </div>
 
             {/* Parent/ Gurdian Address */}
             <div className="my-1 formInput">
-              <label htmlFor="address" className={`${style.customLabel}`}>
+              <label
+                htmlFor="parenntAddress"
+                className={`${style.customLabel}`}
+              >
                 Address *
               </label>
 
@@ -329,17 +339,17 @@ const UserForm = () => {
               >
                 <FaHome size={18} className={`${style.formIcon} shrink-0`} />
                 <input
-                  id="address"
+                  id="parenntAddress"
                   type="address"
                   className={`grow`}
-                  placeholder="Home Address"
+                  placeholder="Type Home Address"
                 />
               </label>
             </div>
 
             {/* Occupation */}
             <div className=" my-1 formInput">
-              <label htmlFor="fullname" className={`${style.customLabel}`}>
+              <label htmlFor="occupation" className={`${style.customLabel}`}>
                 Occupation *
               </label>
 
@@ -351,10 +361,10 @@ const UserForm = () => {
                   className={` ${style.formIcon} shrink-0`}
                 />
                 <input
-                  id="fullname"
+                  id="occupation"
                   type="text"
                   className={`grow`}
-                  placeholder="Type your name here"
+                  placeholder="Occupation"
                 />
               </label>
             </div>
@@ -374,7 +384,7 @@ const UserForm = () => {
           </div>
 
           <div className="form-section w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
-            {/* Relationship */}
+            {/* Category */}
             <div className="my-1 mt-5 lg:col-span-3 formInput">
               <label htmlFor="category" className={`${style.customLabel}`}>
                 Applying as a *
@@ -382,7 +392,8 @@ const UserForm = () => {
 
               <select
                 id="category"
-                name="category"
+                // name="category"
+                {...register('category', {required: true}) }
                 defaultValue=""
                 className={`pl-5 select input input-lg w-full ${style.customFormInput} ${style.selectInput}`}
               >
@@ -394,7 +405,10 @@ const UserForm = () => {
                   {" "}
                   Technical Vocational Education (TVET) Student
                 </option>
-                <option value="localUniversity"> Local University Student </option>
+                <option value="localUniversity">
+                  {" "}
+                  Local University Student{" "}
+                </option>
                 <option value="intUniversity">
                   {" "}
                   International University Student{" "}
@@ -403,6 +417,47 @@ const UserForm = () => {
             </div>
           </div>
         </div>
+
+        {category === "localUniversity" && (
+          <div className="mt-10 section-container" id="#highSchool">
+            <div className={`${style.formSectionHeader}`}>
+              <h1 className="primary-Heading">Personal Information</h1>
+              <p className="body-text">
+                This section collects basic details about the applicants to
+                establish their identity and background.
+              </p>
+            </div>
+
+            <div className="form-section w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
+              {/* Fullname */}
+              <div className="mt-5 my-1 lg:col-span-2 formInput">
+                <label htmlFor="fullname" className={`${style.customLabel}`}>
+                  What is your name? *
+                </label>
+
+                <label
+                  className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
+                >
+                  <MdOutlinePersonOutline
+                    size={18}
+                    className={` ${style.formIcon} shrink-0`}
+                  />
+                  <input
+                    id="fullname"
+                    type="text"
+                    className={`grow`}
+                    placeholder="Type your name here"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+        )}
+
+
+
+
+        
       </form>
     </>
   );

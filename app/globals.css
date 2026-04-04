@@ -25,7 +25,6 @@ body {
 }
 
 /* CustomHeadings---------- */
-
 .primary-Heading {
   font-size: clamp(1.8rem, 4vw, 2rem);
   line-height: 1.2;
