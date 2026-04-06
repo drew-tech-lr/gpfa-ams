@@ -9,16 +9,16 @@ const Footer = () => {
     <>
       <div className={`w-full mt-7 ${style.footer}`}>
         <div className="flex items-center gap-1 justify-center">
-          <Link href="/">
+          <Link href="https://gboweepeaceafrica.org/">
             <FaGlobe size={20} />
           </Link>
-          <Link href="/">
+          <Link href="mailto:info@gboweepeaceafrica.org">
             <IoMailUnread size={25} />
           </Link>
-          <Link href="/">
+          <Link href="https://web.facebook.com/GboweePeaceFoundationAfrica">
             <FaFacebook size={20} />
           </Link>
-          <Link href="/">
+          <Link href="https://www.instagram.com/gboweepeacefoundation_africa/">
             <FaInstagram size={20} />
           </Link>
         </div>

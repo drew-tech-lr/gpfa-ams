@@ -186,7 +186,9 @@ const InfoPage = () => {
 
         <p className="body-text">
           <strong>Note:</strong> All applicants applying must gain admission
-          from their prefered Institution of Study.
+          from their prefered Institution of Study. Also, note that if you're
+          currently attending as a First semester student you need to apply as a
+          High School Graduate from the Category of Interest Session.
         </p>
       </div>
 

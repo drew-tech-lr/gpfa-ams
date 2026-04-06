@@ -29,6 +29,21 @@ const Navbar = () => {
             <li data-content="●" className="step">
               Category of Interest
             </li>
+            <li data-content="●" className="step">
+              High School Graduate Session
+            </li>
+            <li data-content="●" className="step">
+              Essay
+            </li>
+            <li data-content="●" className="step">
+              Upload documents
+            </li>
+            <li data-content="●" className="step">
+              Review & Edit
+            </li>
+            <li data-content="●" className="step">
+              Submit
+            </li>
           </ul>
         </div>
       </div>

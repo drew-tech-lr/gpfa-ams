@@ -1,0 +1,279 @@
+import React from "react";
+import style from "./UserForm.module.css";
+import { MdOutlineAttachEmail, MdOutlinePersonOutline, MdOutlineSchool } from "react-icons/md";
+import { IoMdPhonePortrait } from "react-icons/io";
+import { FaRegCalendar } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
+import { GrAggregate } from "react-icons/gr";
+import Reference from "./Reference";
+import EducationBackground from "./EducationBackground";
+
+
+const HighSchoolCategory = () => {
+  return (
+    <>
+      <div className={`mt-10`}>
+        <div className={`${style.formSectionHeader}`}>
+          <h1 className="primary-Heading">High School Graduate Session</h1>
+          <p className="body-text">This section collects basi......</p>
+        </div>
+
+        {/* Education Background */}
+       <EducationBackground />
+
+        {/* Program of interest */}
+        <div className={`${style.formSection}`}>
+          <h3 className={`uppercase third-Heading`}>Program of Interest</h3>
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
+            {/* Intended Field of Study */}
+            <div className="mt-2 formInput">
+              <label htmlFor="fieldOfStudy" className={`${style.customLabel}`}>
+                Intended Field of Study *
+              </label>
+
+              <label
+                className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
+              >
+                <MdOutlineSchool
+                  size={20}
+                  className={` ${style.formIcon} shrink-0`}
+                />
+                <input
+                  id="fieldOfStudy"
+                  type="text"
+                  className={`grow`}
+                  placeholder="Ex: Information Technology"
+                />
+              </label>
+            </div>
+
+            {/* Intended University */}
+            <div className="mt-2 formInput">
+              <label htmlFor="intendedUni" className={`${style.customLabel}`}>
+                Intended University *
+              </label>
+
+              <label
+                className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
+              >
+                <MdOutlineSchool
+                  size={20}
+                  className={` ${style.formIcon} shrink-0`}
+                />
+                <input
+                  id="intendedUni"
+                  type="text"
+                  className={`grow`}
+                  placeholder="Ex: University Of Liberia (UL)"
+                />
+              </label>
+            </div>
+
+            {/* Completion Year */}
+            <div className="mt-2 formInput">
+              <label
+                htmlFor="completionYear"
+                className={`${style.customLabel}`}
+              >
+                Completion Year *
+              </label>
+
+              <label
+                className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
+              >
+                <MdOutlineSchool
+                  size={20}
+                  className={` ${style.formIcon} shrink-0`}
+                />
+                <input
+                  id="completionYear"
+                  type="text"
+                  className={`grow`}
+                  placeholder="Year of Completion"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        {/* Reference */}
+        <Reference />
+        
+        <hr className="my-10 border-t border-gray-300" />
+
+        {/* Essay */}
+        <div className={`${style.formSection}`}>
+          <h2 className={`uppercase secondary-Heading`}>Essay Session</h2>
+          <p className="mb-5 body-text">
+            The motivational essay is a critical component of this process and
+            will be assessed based on how well you follow the guidelines provide
+            answers. Your essay should address the following questions clearly
+            and thoughtfully: Why are you applying for this scholarship?, What
+            specific challenges, issues, or obstacles have you faced in
+            continuing your studies? and Why are you interested in the program
+            of your choice? (between 350 and 400 words max)
+          </p>
+          <div className="w-full">
+            {/* Essay Question 1: */}
+            <div className="mt-2 formInput">
+              <label
+                htmlFor="essayQuestionOne"
+                className={`${style.customLabel}`}
+              >
+                Why are you interested in this program? *
+              </label>
+
+              <textarea
+                id="essayQuestionOne"
+                placeholder="150 - 200 words"
+                className={`mt-1 w-full ${style.customFormInput} textarea textarea-lg`}
+              ></textarea>
+            </div>
+
+            {/* Essay Question 2: */}
+            <div className="mt-10 formInput">
+              <label
+                htmlFor="essayQuestionTwo"
+                className={`${style.customLabel}`}
+              >
+                Why did you choose this field of study? *
+              </label>
+
+              <textarea
+                id="essayQuestionTwo"
+                placeholder="150 - 200 words"
+                className={`mt-1 w-full ${style.customFormInput} textarea textarea-lg`}
+              ></textarea>
+            </div>
+
+            {/* Essay Question 2: */}
+            <div className="mt-10 formInput">
+              <label
+                htmlFor="essayQuestionTwo"
+                className={`${style.customLabel}`}
+              >
+                Why do you need this Scholarship? *
+              </label>
+
+              <textarea
+                id="essayQuestionTwo"
+                placeholder="150 - 200 words"
+                className={`mt-1 w-full ${style.customFormInput} textarea textarea-lg`}
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <hr className="my-10 border-t border-gray-300" />
+
+        {/* Upload Documents */}
+        <div className={`${style.formSection}`}>
+          <h2 className={`uppercase secondary-Heading`}>Upload Documents</h2>
+          <p className="mb-5 body-text">
+            Please note that all uploaded documents are to be in pdf format
+            only. Upload the required documents below
+          </p>
+          <div className="w-full">
+            {/* Uplaod 1 */}
+            <div className="flex mt-2 formInput">
+              <fieldset className="fieldset flex flex-col-reverse lg:flex-row gap-1 lg:gap-9  w-full">
+                <input
+                  type="file"
+                  className={`file-input ${style.customFormInput}`}
+                />
+                <div>
+                  <legend className="fieldset-legend text-[17px]">
+                    Upload Passport size photo *
+                  </legend>
+                  <label className="label text-[15px]">Max size 2MB</label>
+                </div>
+              </fieldset>
+            </div>
+
+            {/* Uplaod 2 */}
+            <div className="flex mt-2 formInput">
+              <fieldset className="fieldset flex flex-col-reverse lg:flex-row gap-1 lg:gap-9 w-full">
+                <input
+                  type="file"
+                  className={`file-input ${style.customFormInput}`}
+                />
+                <div>
+                  <legend className="fieldset-legend text-[17px]">
+                    Official WASSCE/ WAEC Certificate *
+                  </legend>
+                  <label className="label text-[15px]">Max size 2MB</label>
+                </div>
+              </fieldset>
+            </div>
+
+            {/* Uplaod 3 */}
+            <div className="flex mt-2 formInput">
+              <fieldset className="fieldset flex flex-col-reverse lg:flex-row gap-1 lg:gap-9 w-full">
+                <input
+                  type="file"
+                  className={`file-input ${style.customFormInput}`}
+                />
+                <div>
+                  <legend className="fieldset-legend text-[17px]">
+                    Official High School Transcript *
+                  </legend>
+                  <label className="label text-[15px]">Max size 2MB</label>
+                </div>
+              </fieldset>
+            </div>
+
+            {/* Uplaod 4 */}
+            <div className="flex mt-2 formInput">
+              <fieldset className="fieldset flex flex-col-reverse lg:flex-row gap-1 lg:gap-9 w-full">
+                <input
+                  type="file"
+                  className={`file-input ${style.customFormInput}`}
+                />
+                <div>
+                  <legend className="fieldset-legend text-[17px]">
+                    Admission Letter *
+                  </legend>
+                  <label className="label text-[15px]">Max size 2MB</label>
+                </div>
+              </fieldset>
+            </div>
+
+            {/* Uplaod 5 */}
+            <div className="flex mt-2 formInput">
+              <fieldset className="fieldset flex flex-col-reverse lg:flex-row gap-1 lg:gap-9 w-full">
+                <input
+                  type="file"
+                  className={`file-input ${style.customFormInput}`}
+                />
+                <div>
+                  <legend className="fieldset-legend text-[17px]">
+                    Recommendation Letter 1 *
+                  </legend>
+                  <label className="label text-[15px]">Max size 2MB</label>
+                </div>
+              </fieldset>
+            </div>
+
+            {/* Uplaod 6 */}
+            <div className="flex mt-2 formInput">
+              <fieldset className="fieldset flex flex-col-reverse lg:flex-row gap-1 lg:gap-9 w-full">
+                <input
+                  type="file"
+                  className={`file-input items-end ${style.customFormInput}`}
+                />
+                <div>
+                  <legend className="fieldset-legend text-[17px]">
+                    Recommendation Letter 2 *
+                  </legend>
+                  <label className="label text-[15px]">Max size 2MB</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default HighSchoolCategory;
