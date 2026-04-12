@@ -1,14 +1,16 @@
 import React from "react";
-import style from "./UserForm.module.css";
+import style from "../UserForm.module.css";
 import { MdOutlineSchool } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";
 import { FaRegCalendar } from "react-icons/fa";
 import { GrAggregate } from "react-icons/gr";
+import { useForm } from "react-hook-form";
 
 const EducationBackground = () => {
+  const {register, handleSubmit, formState:{errors}} = useForm();
+  
   return (
     <>
-      {" "}
       <div className={`${style.formSection}`} id="educationBackground">
         <h3 className={`uppercase third-Heading`}>Education Background</h3>
         <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
@@ -29,6 +31,7 @@ const EducationBackground = () => {
                 className={` ${style.formIcon} shrink-0`}
               />
               <input
+              {...register('highSchoolGraduated')}
                 id="highSchoolGraduated"
                 type="text"
                 className={`grow`}

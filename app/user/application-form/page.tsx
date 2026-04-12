@@ -1,12 +1,13 @@
 import React from "react";
 import UserForm from "./UserForm";
 
-const FormPage = () => {
+
+const applicationFormPage = () => {
   return (
     <>
-      <UserForm />
+    <UserForm />
     </>
   );
 };
 
-export default FormPage;
+export default applicationFormPage;

@@ -1,14 +1,16 @@
 import React from "react";
-import style from "./UserForm.module.css";
+import style from "../UserForm.module.css";
 import { MdOutlineAttachEmail, MdOutlinePersonOutline } from "react-icons/md";
 import { IoMdPhonePortrait } from "react-icons/io";
 import { FaHome } from "react-icons/fa";
+import SectionWrapper from "../SectionWrapper";
 
-const ParentInfo = () => {
+const ParentInfo = ({ onActive }: { onActive: () => void }) => {
   return (
     <>
       {/* ---- Parent/ Gurdian Information ------------------------ */}
-      <div className="section-container " id="personal-info">
+      <SectionWrapper onActive={onActive}>
+      <div className="section-container " id="parentInfo">
         <div className={`${style.formSectionHeader}`}>
           <h1 className="primary-Heading">Parent/ Gurdian Information</h1>
           <p className="body-text">
@@ -147,6 +149,7 @@ const ParentInfo = () => {
           </div>
         </div>
       </div>
+      </SectionWrapper>
       <hr className="my-10 border-t border-gray-300" />
     </>
   );

@@ -1,13 +1,9 @@
 import React from "react";
-import style from "./UserForm.module.css";
-import { MdOutlineAttachEmail, MdOutlinePersonOutline, MdOutlineSchool } from "react-icons/md";
-import { IoMdPhonePortrait } from "react-icons/io";
-import { FaRegCalendar } from "react-icons/fa";
-import { HiLocationMarker } from "react-icons/hi";
-import { GrAggregate } from "react-icons/gr";
-import Reference from "./Reference";
-import EducationBackground from "./EducationBackground";
+import style from "../UserForm.module.css";
+import { MdOutlineSchool } from "react-icons/md";
 
+import Reference from "../form-sessions/Reference";
+import EducationBackground from "../form-sessions/EducationBackground";
 
 const HighSchoolCategory = () => {
   return (
@@ -19,7 +15,7 @@ const HighSchoolCategory = () => {
         </div>
 
         {/* Education Background */}
-       <EducationBackground />
+        <EducationBackground />
 
         {/* Program of interest */}
         <div className={`${style.formSection}`}>
@@ -98,7 +94,7 @@ const HighSchoolCategory = () => {
 
         {/* Reference */}
         <Reference />
-        
+
         <hr className="my-10 border-t border-gray-300" />
 
         {/* Essay */}

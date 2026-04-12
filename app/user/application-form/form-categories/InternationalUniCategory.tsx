@@ -1,16 +1,16 @@
 import React from "react";
-import style from "./UserForm.module.css";
+import style from "../UserForm.module.css";
 import { MdOutlineSchool } from "react-icons/md";
-import Reference from "./Reference";
-import EducationBackground from "./EducationBackground";
+import Reference from "../form-sessions/Reference";
+import EducationBackground from "../form-sessions/EducationBackground";
 
-const TvetCategory = () => {
+const internationalUniCategory = () => {
   return (
     <>
       <div className={`mt-10`}>
         <div className={`${style.formSectionHeader}`}>
           <h1 className="primary-Heading">
-            Technical Vocational Education Training (T-VET)
+            Undergraduate Studies - International Session
           </h1>
           <p className="body-text">This section collects basi......</p>
         </div>
@@ -20,35 +20,12 @@ const TvetCategory = () => {
 
         {/* Program of interest */}
         <div className={`${style.formSection}`}>
-          <h3 className={`uppercase third-Heading`}>TVET Program of Interest</h3>
+          <h3 className={`uppercase third-Heading`}>Program of Interest</h3>
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
-           
-            {/* Intended TVET Program */}
-            <div className="mt-2 formInput">
-              <label htmlFor="fieldOfStudy" className={`${style.customLabel}`}>
-                Intended TVET Program *
-              </label>
-
-              <label
-                className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
-              >
-                <MdOutlineSchool
-                  size={20}
-                  className={` ${style.formIcon} shrink-0`}
-                />
-                <input
-                  id="fieldOfStudy"
-                  type="text"
-                  className={`grow`}
-                  placeholder="Ex: Electricity"
-                />
-              </label>
-            </div>
-
-            {/* Intended TVET Institution */}
+            {/* University currently attending */}
             <div className="mt-2 formInput">
               <label htmlFor="intendedUni" className={`${style.customLabel}`}>
-                Intended TVET Instution *
+                University currently attending *
               </label>
 
               <label
@@ -62,7 +39,29 @@ const TvetCategory = () => {
                   id="intendedUni"
                   type="text"
                   className={`grow`}
-                  placeholder="Ex: University Of Liberia (UL)"
+                  placeholder="Name of University/College"
+                />
+              </label>
+            </div>
+
+            {/* Program Studying */}
+            <div className="mt-2 formInput">
+              <label htmlFor="fieldOfStudy" className={`${style.customLabel}`}>
+                Program Studying *
+              </label>
+
+              <label
+                className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
+              >
+                <MdOutlineSchool
+                  size={20}
+                  className={` ${style.formIcon} shrink-0`}
+                />
+                <input
+                  id="fieldOfStudy"
+                  type="text"
+                  className={`grow`}
+                  placeholder="Ex: Information Technology - BSc"
                 />
               </label>
             </div>
@@ -73,7 +72,7 @@ const TvetCategory = () => {
                 htmlFor="completionYear"
                 className={`${style.customLabel}`}
               >
-                Completion Year *
+                Year of Completion *
               </label>
 
               <label
@@ -88,6 +87,73 @@ const TvetCategory = () => {
                   type="text"
                   className={`grow`}
                   placeholder="Ex: 2years"
+                />
+              </label>
+            </div>
+
+            {/* Study Level */}
+            <div className="my-1 formInput">
+              <label htmlFor="studyLevel" className={`${style.customLabel}`}>
+                Study Level *
+              </label>
+
+              <select
+                id="studyLevel"
+                name="studyLevel"
+                defaultValue=""
+                className={`pl-5 select input input-lg w-full ${style.customFormInput} ${style.selectInput}`}
+              >
+                <option value="" disabled>
+                  Select your status --
+                </option>
+                <option value="semOneFreshmen">1st-Sem. Freshmen</option>
+                <option value="semTwoFreshmen">2nd-Sem. Freshmen</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior</option>
+              </select>
+            </div>
+
+            {/* ID Number */}
+            <div className="mt-2 formInput">
+              <label htmlFor="idNo" className={`${style.customLabel}`}>
+                Student ID Number *
+              </label>
+
+              <label
+                className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
+              >
+                <MdOutlineSchool
+                  size={20}
+                  className={` ${style.formIcon} shrink-0`}
+                />
+                <input
+                  id="idNo"
+                  type="number"
+                  className={`grow`}
+                  placeholder="Ex: 2321-321"
+                />
+              </label>
+            </div>
+
+            {/* Department */}
+            <div className="mt-2 formInput">
+              <label htmlFor="department" className={`${style.customLabel}`}>
+                Department *
+              </label>
+
+              <label
+                className={`input input-lg w-full flex items-center gap-2 ${style.customFormInput}`}
+              >
+                <MdOutlineSchool
+                  size={20}
+                  className={` ${style.formIcon} shrink-0`}
+                />
+                <input
+                  id="department"
+                  type="text"
+                  className={`grow`}
+                  placeholder="Ex: Computer Science Department"
                 />
               </label>
             </div>
@@ -171,6 +237,7 @@ const TvetCategory = () => {
             Please note that all uploaded documents are to be in pdf format
             only. Upload the required documents below
           </p>
+
           <div className="w-full">
             {/* Uplaod 1: Passport-size photo */}
             <div className="flex mt-2 formInput">
@@ -188,7 +255,7 @@ const TvetCategory = () => {
               </fieldset>
             </div>
 
-            {/* Uplaod 2: Admission Letter */}
+            {/* Uplaod 2: Gradesheet */}
             <div className="flex mt-2 formInput">
               <fieldset className="fieldset flex flex-col-reverse lg:flex-row gap-1 lg:gap-9 w-full">
                 <input
@@ -197,7 +264,7 @@ const TvetCategory = () => {
                 />
                 <div>
                   <legend className="fieldset-legend text-[17px]">
-                    Admission Letter from TVET Institution *
+                    Previous Semester Gradesheet *
                   </legend>
                   <label className="label text-[15px]">Max size 2MB</label>
                 </div>
@@ -242,4 +309,4 @@ const TvetCategory = () => {
   );
 };
 
-export default TvetCategory;
+export default internationalUniCategory;

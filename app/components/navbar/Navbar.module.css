@@ -1,16 +1,11 @@
 .navbar {
-    background: url(/images/bgImage.webp);
-    background-color: #fff;
-    /* background-size: cover; */
-    background-position: right top;
+  background: url(/images/bgImage.webp);
+  background-color: #fff;
+  background-position: right top;
 }
-
-/* .customStep {
-  color: red; /* text color 
-} */
 
 .customStep::before,
 .customStep::after {
-  background-color: var(--primary-brand-color); /* line + circle color */
+  background-color: var(--primary-brand-color);
   color: white;
 }

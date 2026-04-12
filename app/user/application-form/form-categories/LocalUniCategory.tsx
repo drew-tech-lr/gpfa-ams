@@ -1,17 +1,15 @@
 import React from "react";
-import style from "./UserForm.module.css";
+import style from "../UserForm.module.css";
 import { MdOutlineSchool } from "react-icons/md";
-import Reference from "./Reference";
-import EducationBackground from "./EducationBackground";
+import Reference from "../form-sessions/Reference";
+import EducationBackground from "../form-sessions/EducationBackground";
 
 const localUniCategory = () => {
   return (
     <>
       <div className={`mt-10`}>
         <div className={`${style.formSectionHeader}`}>
-          <h1 className="primary-Heading">
-            Undergraduate Studies - Local 
-          </h1>
+          <h1 className="primary-Heading">Undergraduate Studies - Local</h1>
           <p className="body-text">This section collects basi......</p>
         </div>
 
@@ -20,9 +18,7 @@ const localUniCategory = () => {
 
         {/* Program of interest */}
         <div className={`${style.formSection}`}>
-          <h3 className={`uppercase third-Heading`}>
-            Program of Interest
-          </h3>
+          <h3 className={`uppercase third-Heading`}>Program of Interest</h3>
           <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-3">
             {/* University currently attending */}
             <div className="mt-2 formInput">
@@ -304,7 +300,6 @@ const localUniCategory = () => {
                 </div>
               </fieldset>
             </div>
-
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./UserForm.module.css";
+import style from "../UserForm.module.css";
 import { MdOutlineAttachEmail, MdOutlinePersonOutline } from "react-icons/md";
 import { IoMdPhonePortrait } from "react-icons/io";
 

@@ -82,7 +82,7 @@ const LoginForm = () => {
 
             {/* Login Button */}
             <div className="button-container mt-10">
-              <Link href="/user/dashboard">
+              <Link href="/user/application-form/overview">
                 <Button
                   btnLabel="Login"
                   variant="primary"

@@ -1,14 +1,14 @@
 import React from "react";
-import { GoDot, GoDotFill } from "react-icons/go";
-import style from "./InfoPage.module.css";
+import { GoDotFill } from "react-icons/go";
 import Button from "@/app/components/button/Button";
 import { MdNavigateNext } from "react-icons/md";
 import Link from "next/link";
+import SectionWrapper from "../SectionWrapper";
 
-const InfoPage = () => {
-  //   const steps = [{ primaryHeading: "" }];
+const Overview = ({ onActive }: { onActive: () => void }) => {
   return (
     <>
+<SectionWrapper onActive={onActive}>
       <div className="">
         <div>
           <p className="highlight-text">
@@ -192,15 +192,16 @@ const InfoPage = () => {
         </p>
       </div>
 
-      <Link href="/user/dashboard/application-form">
+      <Link href="/user/application-form">
         <Button
           className="my-8 w-full p-6 text-3xl"
           btnLabel="Start Application"
           icon={<MdNavigateNext size={25} />}
         />
       </Link>
+      </SectionWrapper>
     </>
   );
 };
 
-export default InfoPage;
+export default Overview;
