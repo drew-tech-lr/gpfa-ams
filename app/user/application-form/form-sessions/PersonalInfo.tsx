@@ -227,7 +227,6 @@ const personalInfo = ({ onActive }: { onActive: () => void }) => {
                 </label>
               </div>
             </div>
-            <Button btnLabel="Submit" />
         </div>
       </SectionWrapper>
       <hr className="my-10 border-t border-gray-300" />
